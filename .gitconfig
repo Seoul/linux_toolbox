@@ -1,0 +1,15 @@
+[user]
+	name = 
+	email = 
+[color]
+	ui = true
+	editor = vim
+[alias]
+	ci = commit
+	co = checkout
+	st = status
+	lg = log --pretty=oneline
+	br = branch
+	rs = rebase
+	df = diff
+	vdf= difftool -y -t vimdiff
