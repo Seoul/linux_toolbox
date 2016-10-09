@@ -30,3 +30,7 @@ syncslpi()
 }
 
 alias ms='myscp'
+
+#export LANG=zh_CN.UTF-8
+export TERM=xterm
+export EDITOR=vim
