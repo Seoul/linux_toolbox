@@ -1,0 +1,58 @@
+[user]
+	name = seoul
+	email = seoul@github.com
+[branch]
+	autosetuprebase = always
+[diff]
+	tool = bc3
+[difftool "bc3"]
+	cmd = /usr/bin/bcompare $LOCAL $REMOTE
+[mergetool "bc3"]
+	cmd = /usr/bin/bcompare $LOCAL $REMOTE $BASE -savetarget $MERGED
+[merge]
+	tool = bc3
+[guitool "difftool"]
+	cmd = git difftool -y $FILENAME
+	noconsole = yes
+	needsfile = yes
+[guitool "difftool_staged"]
+	cmd = git difftool -y --cached $FILENAME
+	noconsole = yes
+	needsfile = yes
+[gui]
+	fontui = -family \"wenquanyi bitmap song\" -size 9 -weight bold -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"wenquanyi bitmap song\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	spellingdictionary = en
+[color]
+	ui = true
+	editor = vim
+[alias]
+	ci = commit
+	co = checkout
+	st = status -uno
+	lg = log --pretty=oneline
+	br = branch
+	rs = rebase
+	df = diff
+	vdf= difftool -y -t vimdiff
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+	filemode = false
+#    whitespace = cr-at-eol
+[url "git://code.seoul.com/aosp"]
+	insteadOf = https://android.googlesource.com
+	insteadOf = http://android.googlesource.com
+[url "git://code.seoul.com/googlecode/"]
+	insteadOf = https://code.google.com/
+[url "git://code.seoul.com/aurora"]
+	insteadOf = git://codeaurora.org
+#[url "git://code.seoul.com/github"]
+#	insteadOf = https://github.com
+[url "git://code.seoul.com/codeaurora_git"]
+	insteadOf = ssh://git@git.codeaurora.org:9222
+[url "git://code.seoul.com/chipcode"]
+	insteadOf = https://chipmaster2.qti.qualcomm.com/home2/git/lenovo-and-lenovo-affiliates
+[url "git://code.seoul.com/googlesource"]
+	insteadOf = https://partner-android.googlesource.com
+	insteadOf = https://partner-android.googlesource.com/../..
